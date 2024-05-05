@@ -20,7 +20,7 @@ public class VizitkaController {
     @GetMapping("/")
     public ModelAndView seznam() {
         ModelAndView result = new ModelAndView("seznam");
-        result.addObject("seznam", service.getAll());
+        result.addObject("vizitky", service.getAll());
         return result;
     }
 
