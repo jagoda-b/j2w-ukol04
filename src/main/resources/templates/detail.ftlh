@@ -40,7 +40,7 @@
 
     <div class="mapa">
         [#if vizitka.celaAdresa??]
-            <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitka.celaAdresa?url}" width="100%"
+            <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitka.celaAdresa?url("UTF-8")}" width="100%"
                     height="100%" frameborder="0"></iframe>
         [/#if]
     </div>
@@ -48,7 +48,6 @@
     <nav>
         <a href="/">◂ zpět na seznam</a>
     </nav>
-
 </div>
 </body>
 </html>
