@@ -86,4 +86,8 @@ public class VizitkaService {
     public Vizitka getById(int id) {
         return seznamVizitek.get(id);
     }
+
+    public void add(Vizitka form) {
+        seznamVizitek.add(form);
+    }
 }
