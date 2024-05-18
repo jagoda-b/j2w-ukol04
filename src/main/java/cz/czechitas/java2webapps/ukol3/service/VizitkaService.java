@@ -90,4 +90,8 @@ public class VizitkaService {
     public void add(Vizitka form) {
         seznamVizitek.add(form);
     }
+
+    public void delete(int id) {
+        seznamVizitek.remove(id);
+    }
 }

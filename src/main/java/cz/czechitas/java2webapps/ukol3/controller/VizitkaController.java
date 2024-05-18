@@ -30,6 +30,7 @@ public class VizitkaController {
     public ModelAndView detail(@PathVariable int id) {
         ModelAndView result = new ModelAndView("detail");
         result.addObject("vizitka", service.getById(id));
+        result.addObject("id", id);
         return result;
     }
 
@@ -45,4 +46,11 @@ public class VizitkaController {
         service.add(form);
         return "redirect:/";
     }
+
+    @PostMapping("/detail/{id}")
+    public String delete(@PathVariable int id) {
+        service.delete(id);
+        return "redirect:/";
+    }
+
 }
