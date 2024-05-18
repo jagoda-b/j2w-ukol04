@@ -43,6 +43,9 @@ public class VizitkaController {
 
     @PostMapping("/nova")
     public String nova(Vizitka form) {
+        if (form.getJmeno() == null || form.getFirma() == null || form.getUlice() == null || form.getObecPsc() == null) {
+            throw new IllegalArgumentException("All fields must be filled");
+        }
         service.add(form);
         return "redirect:/";
     }

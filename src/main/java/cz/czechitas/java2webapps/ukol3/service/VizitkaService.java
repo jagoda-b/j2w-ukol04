@@ -84,7 +84,11 @@ public class VizitkaService {
     }
 
     public Vizitka getById(int id) {
-        return seznamVizitek.get(id);
+       try {
+           return seznamVizitek.get(id);
+       } catch (IndexOutOfBoundsException e) {
+           throw new IllegalArgumentException("Invalid ID: " + id, e);
+       }
     }
 
     public void add(Vizitka form) {

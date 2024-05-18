@@ -26,10 +26,10 @@
             </div>
             <div class="kontakty">
                 [#if vizitka.email??]
-                    <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>
+                    <div><i class="las la-at"></i> <a href="mailto:${vizitka.email}"> <span>${vizitka.email}</span></a></div>
                 [/#if]
                 [#if vizitka.telefon??]
-                    <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>
+                    <div><i class="las la-phone-alt"></i> <a href="tel:${vizitka.telefon}"><span>${vizitka.telefon}</span></a></div>
                 [/#if]
                 [#if vizitka.web??]
                     <div><i class="las la-globe"></i> <span>${vizitka.web}</span></div>
@@ -48,7 +48,6 @@
     <nav>
         <a href="/">◂ zpět na seznam</a>
     </nav>
-
 
 </div>
 </body>
